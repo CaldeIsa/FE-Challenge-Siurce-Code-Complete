@@ -80,11 +80,13 @@ function initSearchButton() {
         }
       }
 
+
+      
       const proxyurl = '';
       let url;
-      if (inputEmail.style.display == 'block') {
+      if (emailInput.style.display == 'block') {
         url = 'https://ltvdataapi.devltv.co/api/v1/records?email=' + email;
-      } else if (inputPhone.style.display == 'block') {
+      } else if (phoneInput.style.display == 'block') {
         url = 'https://ltvdataapi.devltv.co/api/v1/records?phone=' + phone;
       }
 
