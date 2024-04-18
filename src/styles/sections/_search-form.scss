@@ -50,7 +50,7 @@
     }
   }
 
-  &.error > .form-control {
+  &.error-email > .form-control, &.error-phone > .form-control {
     border: 3px solid #DC0015;
     border-radius: 3px 3px 0 0 !important;
   }
@@ -73,7 +73,7 @@
 }
 
 
-.input-group.error .error-msg {
+.input-group.error-email .error-msg, .input-group.error-phone .error-msg2  {
   display: block;
   position: absolute;
   bottom: -30px;

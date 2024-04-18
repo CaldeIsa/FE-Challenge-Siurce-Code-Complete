@@ -39,11 +39,11 @@
               </div>
           </div>
           <div class="input-group">
-              <input id="email-search-input" class="form-control" type="text" name="email" placeholder="Enter an Email Address" />
-              <p class="error-msg">Please enter a valid email address</p>
-              <input id="phone-search-input" class="form-control" type="number" inputmode="numeric" pattern="[0-9]*" maxlength="10" name="phone" placeholder="Enter a Phone Number" style="display: none;" />
-              <p class="error-msg2">Please enter a valid Phone Number</p>
-              <button class="js-btn-search btn btn-form-submit text-uppercase" type="submit" data-form="search">Go!</button>
+              <input id="email-search-input" autocomplete="email" class="form-control" type="text" name="email" style="display: none;" placeholder="Enter an Email Address" />
+              <p id="error-msg" class="error-msg">Please enter a valid email address</p>
+              <input id="phone-search-input" class="form-control" autocomplete="email" type="text" name="phone" placeholder="Enter a Phone Number" style="display: none;" />
+              <p id="error-msg2" class="error-msg2">Please enter a valid Phone Number</p>
+              <button id="btn-go" class="js-btn-search btn btn-form-submit text-uppercase" type="submit" style="display: none;" data-form="search">Go!</button>
           </div>
           <div class="d-flex justify-content-start justify-content-md-end align-items-center mt-4">
               <img src="assets/lock.svg" alt="lock">
@@ -156,12 +156,25 @@
           <h2 class="mb-4 mb-md-5"><strong>Try Again</strong> - Make a new search</h2>
         </div>
         <form>
-          <div class="input-group">
-            <input id="email-search-again-input" class="form-control" type="text" name="email" placeholder="Enter an Email Address" />
-            <p class="error-msg">Please enter a valid email address</p>
-            <button class="js-btn-search btn btn-form-submit text-uppercase" type="submit" data-form="search-again">Go!</button>
+          <div>
+              <p class="text-white">TYPE OF SEARCH:</p>
+              <div class="btn-group" role="group" aria-label="Type of search">
+                  <button id="email-btn" type="button" class="btn btn-secondary">Email Address</button>
+                  <button id="phone-btn" type="button" class="btn btn-secondary">Phone Number</button>
+              </div>
           </div>
-        </form>
+          <div class="input-group">
+              <input id="email-search-input" autocomplete="email" class="form-control" type="text" name="email" style="display: none;" placeholder="Enter an Email Address" />
+              <p id="error-msg" class="error-msg">Please enter a valid email address</p>
+              <input id="phone-search-input" class="form-control" autocomplete="email" type="text" name="phone" placeholder="Enter a Phone Number" style="display: none;" />
+              <p id="error-msg2" class="error-msg2">Please enter a valid Phone Number</p>
+              <button class="js-btn-search btn btn-form-submit text-uppercase" type="submit" data-form="search">Go!</button>
+          </div>
+          <div class="d-flex justify-content-start justify-content-md-end align-items-center mt-4">
+              <img src="assets/lock.svg" alt="lock">
+              <p class="form-subtext">People in the search won't be notified.</p>
+          </div>
+      </form>
       </div>
     </section>
 
